@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "navtrain-10hz-creation"
+version = "0.1.0"
+description = "Recreate NAVSIM navtrain with native nuPlan 10 Hz camera histories"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {file = "LICENSE"}
+authors = [{name = "LiuYMUNI"}]
+dependencies = [
+  "numpy>=1.23,<3",
+  "Pillow>=9,<13",
+  "PyYAML>=6,<7",
+  "requests>=2.28,<3",
+]
+
+[project.urls]
+Repository = "https://github.com/LiuYMUNI/navtrain_10hz_creation"
+
+[tool.setuptools.packages.find]
+include = ["navtrain10hz*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

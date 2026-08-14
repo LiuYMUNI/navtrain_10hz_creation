@@ -1,0 +1,7 @@
+{
+  "format": "navtrain10hz_source_checksums_v1",
+  "navtrain_yaml_sha256": "5f3c406a06c961e75d69d33bc127acd5704a3a440a7186bfa2212493ecf9fc01",
+  "reference_inventory_sha256": "4680d08b791cce8d643387508ac3ba2037bcd46139fae45bf3ff47a5d47b61c2",
+  "reference_history_index_sha256": "caf4d28e7764623bcd3deefc930f64be4b8729520a88f8266024a1d79bb313b5",
+  "notes": "SQLite file hashes can vary after rebuilding with a different SQLite version. Validate semantic counts and sorted row digests in addition to raw file hashes."
+}

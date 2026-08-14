@@ -1,0 +1,19 @@
+{
+  "format": "navtrain10hz_expected_counts_v1",
+  "dataset_definition": "NAVSIM navtrain 2 Hz anchors and labels with native nuPlan v1.1 10 Hz camera histories",
+  "navsim_log_count": 1192,
+  "navsim_anchor_count": 103288,
+  "camera_channel_count": 8,
+  "native_image_count": 5625150,
+  "anchor_image_reference_count": 13230173,
+  "official_navsim_image_count": 1219960,
+  "added_native_nuplan_image_count": 4405190,
+  "source_camera_archive_count": 55,
+  "train_camera_groups": {"first": 0, "last": 42, "count": 43},
+  "val_camera_groups": {"first": 0, "last": 11, "count": 12},
+  "image_width": 1920,
+  "image_height": 1080,
+  "image_channels": 3,
+  "logical_image_bytes_reference_run": 1208001836747,
+  "packed_image_bytes_reference_run": 946079402756
+}

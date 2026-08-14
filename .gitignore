@@ -1,0 +1,47 @@
+# Generated data and state (never commit raw/licensed datasets)
+work/
+dataset/
+data/
+outputs/
+*.pack
+*.pack.partial
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.sqlite.lock
+*.pkl
+*.db
+*.jpg
+*.jpeg
+
+# Keep the small documentation image tracked.
+!docs/assets/*.png
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+configs/local.yaml
+configs/relay-producer.yaml
+configs/relay-destination.yaml
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+
+# Python/editor artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store
+*.log
+*.pid

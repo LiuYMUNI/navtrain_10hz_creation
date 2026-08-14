@@ -1,0 +1,21 @@
+# Fast single-machine workflow. Use absolute paths in your private copy.
+navsim_root: /data/navsim
+work_root: /data/navtrain10hz-work
+
+# Defaults to reference/navtrain.yaml when omitted.
+# scene_filter: /path/to/navtrain.yaml
+# existing_camera_root: /data/navsim/sensor_blobs/trainval
+
+download_native_databases: true
+metadata_workers: 8
+
+# The fast local path processes source archives concurrently and writes packs
+# directly to the final work root. Tune down only if bandwidth is constrained.
+pack_workers: 32
+checkpoint_targets: 500
+archive_base_url: https://d1qinkmu0ju04f.cloudfront.net
+
+minimum_free_gb: 1000
+visual_audit_samples: 6
+visual_audit_seed: 20260814
+visual_audit_camera: CAM_F0

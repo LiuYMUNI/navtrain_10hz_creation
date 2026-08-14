@@ -1,0 +1,10 @@
+navtrain_10hz_creation
+Copyright 2026 LiuYMUNI
+
+This project interoperates with NAVSIM/OpenScene and nuPlan. Their datasets,
+code, names, and licenses remain the property of their respective owners.
+The repository does not redistribute raw NAVSIM or nuPlan sensor data.
+
+The pinned navtrain scene-filter configuration and the loader adapter are
+derived from the Apache-2.0-licensed NAVSIM codebase. See LICENSE and the
+upstream NAVSIM repository for applicable notices.

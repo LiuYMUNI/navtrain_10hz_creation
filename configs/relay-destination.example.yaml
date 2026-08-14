@@ -1,0 +1,11 @@
+# This file documents destination-side values. Pass them as explicit CLI
+# arguments to offload_navsim_nuplan10hz_relay.py; never store passwords here.
+remote: user@relay-host
+ssh_key: /home/user/.ssh/id_ed25519_navtrain10hz
+remote_root: /scratch/navtrain10hz-relay
+
+target_state: /data/navtrain10hz-work/state/camera_target_state.sqlite
+local_pack_root: /data/navtrain10hz-work/camera_packs
+local_state_root: /data/navtrain10hz-work/relay_states
+local_report_root: /data/navtrain10hz-work/relay_reports
+local_manifest_root: /data/navtrain10hz-work/offload_manifests

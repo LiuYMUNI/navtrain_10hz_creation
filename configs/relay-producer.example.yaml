@@ -1,0 +1,18 @@
+# Run on the fast-network relay. Use absolute paths in your private copy.
+work_root: /scratch/navtrain10hz-relay
+target_state: /scratch/navtrain10hz-relay/input/camera_target_state.sqlite
+
+# Current packer verifies/reuses official 2 Hz frames from this tree. This
+# avoids downloading another ~262 GB into packs.
+existing_camera_root: /data/navsim/sensor_blobs/trainval
+
+archive_base_url: https://d1qinkmu0ju04f.cloudfront.net
+archives_per_batch: 8
+workers: 16
+checkpoint_targets: 500
+
+# A new batch waits for the higher floor. An interrupted committed batch may
+# resume above the emergency floor while the independent offloader frees space.
+min_free_gb: 500
+resume_min_free_gb: 100
+poll_seconds: 300
