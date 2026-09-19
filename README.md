@@ -41,6 +41,32 @@ python3 -m venv .venv
 .venv/bin/pip install -r requirements.lock
 ```
 
+## Direct JPEG download using published offsets
+
+For native JPEG retrieval without remote TAR-header scanning, update this clone
+and use the published 5,625,150-image offset index:
+
+```bash
+git pull --ff-only
+.venv/bin/python scripts/navsim_direct_jpeg.py download \
+  --manifest "file://$(pwd)/reference/direct_jpeg/latest.json" \
+  --output /data/navtrain10hz-jpegs --workers 16 --limit 25
+```
+
+Remove `--limit 25` after checking the sample and available disk space. Repeat
+the same command to resume with hash-verified receipts. If repository access
+requires authentication, set `GITHUB_TOKEN` in the environment. For a Python
+installation without a working trust store, add
+`--ca-file /etc/ssl/certs/ca-certificates.crt`.
+
+The [index release](https://github.com/LiuYMUNI/navtrain_10hz_creation/releases/tag/navsim-direct-jpeg-v1)
+contains metadata only; JPEGs come from the original nuPlan source. This command
+writes loose JPEGs beneath `sensor_blobs/`; it does not produce the `.pack`
+files or final storage/history indexes used by the pipeline below. Each target
+uses a direct byte-range request, with source ETag, size and JPEG validation,
+plus native SHA-256 where recorded. Hashes of reused OpenScene images are not
+claimed to be native nuPlan hashes. No measured full-run speedup is claimed.
+
 ## Fast single-machine workflow
 
 The recommended local path uses the **same selective range packer as the
